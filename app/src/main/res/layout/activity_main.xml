@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="com.example.asus.factorial.MainActivity">
+
+    <TextView
+        android:id="@+id/Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Number : "
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Number"
+        android:layout_alignBottom="@+id/Number"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="28dp"
+        android:ems="10"
+        android:hint="Enter the number here"
+        android:maxLength="5"
+        android:inputType="number"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <TextView
+        android:id="@+id/Factorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Number"
+        android:layout_below="@+id/input"
+        android:layout_marginTop="18dp"
+        android:text="Factorial - "
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/output"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_above="@+id/button2"
+        android:layout_alignEnd="@+id/input"
+        android:layout_alignStart="@+id/Factorial"
+        android:layout_below="@+id/Factorial"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/Number"
+            android:layout_marginEnd="11dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="30sp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/input"
+        android:layout_marginBottom="21dp"
+        android:onClick="Calculate_Factorial"
+        android:text="Calculate" />
+
+</RelativeLayout>
